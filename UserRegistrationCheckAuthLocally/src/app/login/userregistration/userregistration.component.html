@@ -3,24 +3,24 @@
 <div class="head">
   <label for="inputPassword" class="col-sm-2 col-form-label">FirstName</label>
   <div class="col-sm-10">
-    <input type="password" class="form-control" id="inputPassword" />
+    <input  type="text" [(ngModel)]="regserviceService.firstName" class="form-control" id="inputPassword" />
   </div>
   <label for="inputPassword" class="col-sm-2 col-form-label">LastName</label>
   <div class="col-sm-10">
-    <input type="password" class="form-control" id="inputPassword" />
+    <input type="text" [(ngModel)]="regserviceService.lastName" class="form-control" id="inputPassword" />
   </div>
   <label for="inputPassword" class="col-sm-2 col-form-label">E-mail</label>
   <div class="col-sm-10">
-    <input type="password" class="form-control" id="inputPassword" />
+    <input type="text" [(ngModel)]="regserviceService.email" class="form-control" id="inputPassword" />
   </div>
-  <label for="inputPassword" class="col-sm-2 col-form-label">Address</label>
+  <label for="inputPassword" [(ngModel)]="regserviceService.address" class="col-sm-2 col-form-label">Address</label>
   <div class="col-sm-10">
-    <input type="password" class="form-control" id="inputPassword" />
+    <input type="text" class="form-control" id="inputPassword" />
   </div>
   <label for="inputPassword" class="col-sm-2 col-form-label">SetPasswaord</label>
   <div class="col-sm-10">
-    <input type="password" class="form-control" id="inputPassword" />
+    <input type="password" [(ngModel)]="regserviceService.setPass" class="form-control" id="inputPassword" />
     <br>
   </div>
-  <button type="button" class="btn">Register</button>
+  <button type="button" (click)="registerUser()" class="btn">Register</button>
 </div>
