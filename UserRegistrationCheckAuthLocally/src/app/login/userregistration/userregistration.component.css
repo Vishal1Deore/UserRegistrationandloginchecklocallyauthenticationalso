@@ -1,7 +1,8 @@
 .head{
     color: black;
     margin: 100px 300px;
-    padding: 100px 100px;
+    padding: 10px 100px;
+    background-color: aqua;
 }
 .btn{
     color: brown;
