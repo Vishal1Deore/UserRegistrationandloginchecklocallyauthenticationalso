@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AppComponent } from 'src/app/app.component';
 import { RegserviceService } from 'src/app/services/regservice.service';
+import { WhologinService } from 'src/app/services/whologin.service';
 
 @Component({
   selector: 'app-userlogin',
@@ -12,7 +13,7 @@ export class UserloginComponent {
 
   myvar:number;
 
-  constructor(private service:RegserviceService,private app:AppComponent,private login){}
+  constructor(private service:RegserviceService,private app:AppComponent,private loginuserd:WhologinService){}
   uIUserName:string;
   uIPassWord:string;
 
@@ -25,6 +26,11 @@ export class UserloginComponent {
       let loginuser=this.service.getUserFromUsername(this.uIUserName);
       if(loginuser.firstName==this.uIUserName&& loginuser.setPass==this.uIPassWord){
         window.alert("login successful");
+        this.app.isLoginSuccess=1;
+        this.loginuserd.setData(loginuser);
+      }
+      else{
+        window.alert("login unsuccessful");
       }
     }
   }

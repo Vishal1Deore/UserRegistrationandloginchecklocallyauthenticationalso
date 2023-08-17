@@ -9,7 +9,7 @@ export class AppComponent {
   title = 'UserRegistrationCheckAuthLocally';
   whatToShow:number;
 
-  isLoginSuccess:0;
+  isLoginSuccess=0;
 
   showData(num:number){
     this.whatToShow=num;
