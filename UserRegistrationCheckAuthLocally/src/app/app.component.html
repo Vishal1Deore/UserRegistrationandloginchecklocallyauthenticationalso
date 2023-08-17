@@ -1,10 +1,10 @@
+<!-- <app-desktop></app-desktop> -->
+<button type="button" class="btn" (click)="showData(1)">Log-In</button>
+<button type="button" class="btn" (click)="showData(2)">Register</button>
+
 <div *ngIf="whatToShow==1">
   <app-userlogin></app-userlogin>
 </div>
 <div *ngIf="whatToShow==2">
   <app-userregistration></app-userregistration>
 </div>
-
-  <button type="button" class="btn" (click)="showData(1)">Log-In</button>
-    <button type="button" class="btn" (click)="showData(2)">Register</button>
-  

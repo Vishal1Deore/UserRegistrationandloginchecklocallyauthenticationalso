@@ -2,13 +2,14 @@
 <div class="head">
   <label for="inputPassword" class="col-sm-2 col-form-label">UserName</label>
   <div class="col-sm-10">
-    <input type="password" class="form-control" id="inputPassword" />
+    <input [(ngModel)]="uIUserName" type="password"  class="form-control" id="inputPassword" />
   </div>
   <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
   <div class="col-sm-10">
-    <input type="password" class="form-control" id="inputPassword" />
+    <input  [(ngModel)]="uIPassWord" type="password" class="form-control" id="inputPassword" />
     <br />
   </div>
 
-  <button type="button" class="btn">Log-In</button>
+  <button type="button" (click)="login()" class="btn">Log-In</button>
 </div>
+ 

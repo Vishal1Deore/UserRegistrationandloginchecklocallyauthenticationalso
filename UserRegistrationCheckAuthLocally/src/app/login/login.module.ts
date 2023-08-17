@@ -6,14 +6,17 @@ import { FormsModule } from '@angular/forms';
 
 
 
+
 @NgModule({
   declarations: [
     UserloginComponent,
-    UserregistrationComponent
+    UserregistrationComponent,
+  
   ],
   imports: [
     CommonModule,
     FormsModule
+    
   ],
   exports:[
     UserloginComponent,
