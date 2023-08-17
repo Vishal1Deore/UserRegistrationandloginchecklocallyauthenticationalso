@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppComponent } from 'src/app/app.component';
 import { RegserviceService } from 'src/app/services/regservice.service';
 
 @Component({
@@ -11,13 +12,14 @@ export class UserloginComponent {
 
   myvar:number;
 
-  constructor(private service:RegserviceService){}
+  constructor(private service:RegserviceService,private app:AppComponent,private login){}
   uIUserName:string;
   uIPassWord:string;
 
   login(){
     if(this.service.isUserAlreadyPresentInService(this.uIUserName)==false){
       window.alert("User not found");
+      
     }
     else{
       let loginuser=this.service.getUserFromUsername(this.uIUserName);
