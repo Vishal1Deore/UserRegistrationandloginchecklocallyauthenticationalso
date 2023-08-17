@@ -13,17 +13,26 @@ export class UserregistrationComponent {
 
   }
   regserviceService:User= new User();
+  registerUserData:User=new User();
 
   registerUser(){
-    if(this.service.isUserAlreadyPresentInService(this.regserviceService.firstName)==true){
-      window.alert("already user register");
+    if(this.registerUserData.firstName==undefined||this.registerUserData.lastName==undefined||this.registerUserData.email==undefined||this.registerUserData.address==undefined||this.registerUserData.setPass==undefined)
+    {
+      window.alert("all feild are mindatory");
     }
     else{
-      this.service.setUserInService(this.regserviceService);
-      window.alert("Registration Successful");
-      this.regserviceService= new User();
+      if(this.service.isUserAlreadyPresentInService(this.regserviceService.firstName)==true){
+        window.alert("already user register");
+      }
+      else{
+        this.service.setUserInService(this.regserviceService);
+        window.alert("Registration Successful");
+        this.regserviceService= new User();
+      }
+      
+    }
     }
     
-  }
+    
 
 }
